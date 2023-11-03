@@ -1,32 +1,28 @@
 import { useState } from 'react';
-import InitalData from './data.js';
-import Sections from './sections/Sections.jsx';
-import Preview from './preview/Preview.jsx';
+import MOCkUP_DATA from './mockup_data.js';
+import Sections from './components/sections/sections.jsx';
+// import Preview from './preview/Preview.jsx';
 
 function App() {
-  const [data,setData] = useState(InitalData);
+  const [data,setData] = useState(MOCkUP_DATA);
 
-  function update(){
-    const info = (newInfo) => {
-        setData({...data, info});
-    };
-    const edu = (newEdu) => {
-        setData({...data, edu});
-    }
-    const workExp = (newWorkExp) => {
-        setData({...data, workExp});
-    }
-    return {
-        setInfo: info,
-        setEdu: edu,
-        setWrokExp: workExp
-    }
+  const update = {
+    setInfo (newInfo) {
+        setData({...data, generalInfo: newInfo});
+    },
+    setEdu (newEdu){
+        setData({...data, education: newEdu});
+    },
+    setExp (nexExp) {
+        setData({...data, experience: nexExp});
+    },
   }
 
   return (
+    
     <>
-        <Sections updateData={() => update()}/>
-        <Preview value={data}/>
+    {console.log(data)}
+        <Sections value={data} updateData={update} className="sections"/>
     </>
   );
 }

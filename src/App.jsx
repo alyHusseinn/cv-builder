@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import MOCkUP_DATA from './mockup_data.js';
 import Sections from './components/sections/sections.jsx';
-// import Preview from './preview/Preview.jsx';
+import Preview from './components/preview/preview.jsx';
 
 function App() {
   const [data,setData] = useState(MOCkUP_DATA);
@@ -19,11 +19,10 @@ function App() {
   }
 
   return (
-    
-    <>
-    {console.log(data)}
-        <Sections value={data} updateData={update} className="sections"/>
-    </>
+  <>
+    <Sections value={data} updateData={update} className="sections"/>
+    <Preview info={data}/>
+  </>
   );
 }
 

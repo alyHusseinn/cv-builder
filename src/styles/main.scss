@@ -1,0 +1,62 @@
+$bg-col: white;
+$input-col: rgb(236, 216, 216);
+$txt-col: blue;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@mixin flex-item($dir: row,$wrap: wrap) {
+    display: flex;
+    flex-direction: $dir;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    width: 100vw;
+    background-color: $bg-col;
+}
+
+#root{
+    @include flex-item;
+    width: 100%;
+}
+
+
+.sections{
+    width: 50%;
+    height: 400px;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 0.5em;
+    .fields{
+        @include flex-item(column);
+        gap: 1rem;
+        input, textarea{
+            padding: 5px;
+            font-size: 18px;
+            border: 0;
+            border-radius: 0.5rem;
+            background-color: $input-col;
+            &:focus{
+                border: 0;
+                outline: none
+            }
+        }
+    }
+    .buttons{
+        @include flex-item;
+        justify-content: flex-end;
+        button{
+            padding: 5px;
+            font-size: 15px;
+            background-color: blue;
+            color: white;
+            border: 1px solid white;
+            border-radius: 0.5rem;
+        }
+    }
+}

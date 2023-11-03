@@ -14,7 +14,8 @@ module.exports = {
   rules: {
     'react-refresh/only-export-components': [
       'warn',
-      { allowConstantExport: true },
+      { allowConstantExport: true },23
     ],
+    'react/prop-types': 0 // to silence the warning of props Type
   },
 }

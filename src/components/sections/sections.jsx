@@ -1,13 +1,24 @@
+import { useState } from "react";
 import General from "./genInfo";
 import Education from "./education";
 import WorkExp from "./workExp";
 
 function Sections({value, updateData}){
+    const [secIdx, setSectionIdx] = useState(0);
     return (
     <>
-        <General info={value.generalInfo} updateInfo={(info) => updateData.setInfo(info)}/>
-        <Education info={value.education} updateInfo={(info) => updateData.setEdu(info)}/>
-        <WorkExp info={value.experience} updateInfo={(info) => updateData.setExp(info)}/>
+        <div className="sections">
+            <div className="buttons">
+                {secIdx < 2 && <button onClick={() => setSectionIdx(secIdx + 1)}>Next</button>}
+                {secIdx > 0 && <button onClick={() => setSectionIdx(secIdx - 1)}>Back</button>}
+            </div>
+            <div className="fields">
+                {secIdx == 0 && <General info={value.generalInfo} updateInfo={(info) => updateData.setInfo(info)}/>}
+                {secIdx == 1 && <Education info={value.education} updateInfo={(info) => updateData.setEdu(info)}/>}
+                {secIdx == 2 && <WorkExp info={value.experience} updateInfo={(info) => updateData.setExp(info)}/>}
+            </div>
+            
+        </div>
     </>
     );
 }

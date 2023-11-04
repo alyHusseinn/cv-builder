@@ -1,5 +1,6 @@
 const MOCkUP_DATA = {
     generalInfo: {
+        header: 'General Information',
         name: 'aly ahmed Hussein',
         email: 'aly@gmail.com',
         phone: '01095890633',
@@ -22,7 +23,12 @@ const MOCkUP_DATA = {
             jopTitle: 'software engineering',
             company: 'elwady foundation',
             location: 'cairo, egypt'
-        }
+        },
+        {
+            jopTitle: 'software engineering',
+            company: 'elwady foundation',
+            location: 'cairo, egypt'
+        },
     ],
 };
 

@@ -1,0 +1,80 @@
+@import 'reusable';
+
+.sections{
+    width: 500px;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 0.5em;
+}
+
+.fields{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: $con-col;
+    padding: 1rem;
+    label{
+        text-transform: uppercase;
+        color: $header-col;
+        font-size: 20px;
+        font-weight: 1000;
+    }
+    .input-field{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    input, textarea{
+        padding: 1rem;
+        font-size: 18px;
+        border: 0;
+        border-radius: 0.5rem;
+        background-color: $bg-col;
+        &:focus{
+            border: 2px solid $header-col;
+            outline: none
+        }
+    }
+    .downlaod-sec{
+        text-align: center;
+        text-transform: uppercase;
+        @include flex-item(column);
+        gap: 2rem;
+    }
+    .skill-input{
+        width: 100%;
+        span{
+            background-color: $header-col;
+            color: white;
+            padding: 5px;
+            font-size: 25px;
+            font-weight: 1000;
+        }
+        span:hover{
+            cursor: pointer;
+        }
+        input{
+            width: 90%;
+        }
+    }
+}
+.buttons{
+    @include flex-item;
+    justify-content: flex-end;
+    background-color: $con-col;
+    padding: 1rem;
+}
+
+button{
+    padding: 1rem;
+    font-size: 18px;
+    background-color: $header-col;
+    color: white;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+}
+
+button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}

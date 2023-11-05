@@ -15,9 +15,9 @@ function Exp({value}){
 function Job({value}){
     return (
         <div className="job">
-            <h2 className="company">{value.company}</h2>
-            <h2 className="job-title">{value.jopTitle}</h2>
-            <h3 className="job-location">{value.location}</h3>
+            <h3 className="job-title">Works As: {value.jopTitle}</h3>
+            <h3 className="company">In: {value.company}</h3>
+            <h3 className="job-location">AT: {value.location}</h3>
         </div>
     )
 }

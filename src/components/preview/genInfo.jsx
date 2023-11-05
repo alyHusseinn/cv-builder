@@ -1,7 +1,7 @@
 function GenInfo({value}){
     return (
     <>
-        <div className="preview-geninfo">
+        <div className="cv-geninfo">
             <h1 className="name">{value.name}</h1>
             <div className="contacts">
                 <div className="email">{value.email}</div>

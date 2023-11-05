@@ -1,62 +1,51 @@
-$bg-col: white;
-$input-col: rgb(236, 216, 216);
-$txt-col: blue;
+@use 'preview';
+@use 'sections';
+@import 'reusable';
 
-*{
-    margin: 0;
-    padding: 0;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,500&family=Roboto:wght@300&display=swap");
 
-@mixin flex-item($dir: row,$wrap: wrap) {
-    display: flex;
-    flex-direction: $dir;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
 
 body{
-    width: 100vw;
     background-color: $bg-col;
+    // font-family: "Poppins", sans-serif;
+    font-family: 'Roboto', sans-serif; 
 }
 
-#root{
-    @include flex-item;
+.app{
     width: 100%;
 }
 
+.content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
 
-.sections{
-    width: 50%;
-    height: 400px;
-    padding: 10px;
-    border: 3px solid black;
-    border-radius: 0.5em;
-    .fields{
-        @include flex-item(column);
-        gap: 1rem;
-        input, textarea{
-            padding: 5px;
-            font-size: 18px;
-            border: 0;
-            border-radius: 0.5rem;
-            background-color: $input-col;
-            &:focus{
-                border: 0;
-                outline: none
-            }
-        }
-    }
-    .buttons{
-        @include flex-item;
-        justify-content: flex-end;
-        button{
-            padding: 5px;
-            font-size: 15px;
-            background-color: blue;
-            color: white;
-            border: 1px solid white;
-            border-radius: 0.5rem;
-        }
+header{
+    padding: 1rem;
+    background-color: $header-col;
+    @include flex-item(column);
+    gap: 1rem;
+    color: $con-col;
+    border-bottom: 3px solid black;
+    h1{
+        text-transform: uppercase;
+        font-size: 40px;
     }
 }
+
+footer{
+    padding: 1rem;
+    background-color: $header-col;
+    @include flex-item(column);
+    gap: 1rem;
+    color: $con-col;
+    border-top: 3px solid black;
+    a{
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.64);
+    }
+}
+

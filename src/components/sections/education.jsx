@@ -1,3 +1,5 @@
+import Input from "./Input";
+
 function Education({info, updateInfo}){
     return(
     <>
@@ -18,16 +20,16 @@ function Education({info, updateInfo}){
 function Educell({cellVal, update}){
     return (
     <>
-        <input type="text" name="school" value={cellVal.school} maxLength={40} onChange={
+        <Input type="text" name="school" value={cellVal.school} maxLength={40} onChange={
             (e) => { update({...cellVal, school: e.target.value})}
         }/>
-        <input type="text" name="degree" value={cellVal.degree} maxLength={20} onChange={
+        <Input type="text" name="degree" value={cellVal.degree} maxLength={20} onChange={
             (e) => { update({...cellVal, degree: e.target.value})}
         }/>
-        <input type="date" name="from" value={cellVal.from} onChange={
+        <Input type="date" name="from" value={cellVal.from} onChange={
             (e) => { update({...cellVal, from: e.target.value})}
         }/>
-        <input type="date" name="to" value={cellVal.to} onChange={
+        <Input type="date" name="to" value={cellVal.to} onChange={
             (e) => { update({...cellVal, to: e.target.value})}
         }/>
     </>

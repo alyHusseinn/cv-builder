@@ -1,0 +1,19 @@
+$bg-col: rgb(239, 239, 239);
+$con-col: white;
+$input-col: rgb(236, 216, 216);
+$header-col: rgb(100, 158, 216);
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+@mixin flex-item($dir: row,$wrap: wrap) {
+    display: flex;
+    flex-direction: $dir;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

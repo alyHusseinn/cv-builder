@@ -1,0 +1,74 @@
+@import 'reusable';
+
+.preview{
+    width: 800px;
+    background-color: $con-col;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+    &>*{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        .sec-head{
+            text-transform: uppercase;
+            width: 100%;
+            font-size: 25px;
+            border-bottom: 2px solid black;
+        }
+        .contacts{
+            display: flex;
+            flex-direction: column;
+            
+        }
+    }
+}
+
+
+.cv-geninfo{
+
+    .name{
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .contacts{
+        @include flex-item('row','nowrap');
+        gap: 10px;
+        font-size: 20px;
+    }
+}
+
+.cv-edu{
+    .schools{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 3rem;
+    }
+    span{
+        color: rgb(97, 96, 96);
+        border-bottom: 1px solid black;
+        // margin-left: 2rem;
+        font-size: 18px;
+    }
+}
+
+.cv-skills{
+    .skills{
+        @include flex-item;
+        gap: 2rem;
+    }
+    .skill{
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+
+
+
+
+
+

@@ -1,7 +1,7 @@
-function Edu({value}){
+function Edu({value, addBorder}){
     return (
         
-        <div className="cv-edu">
+        <div className={`${addBorder? "add-border" : ""} cv-edu`}>
             <h1 className="edu-header sec-head">Education</h1>
             <div className="schools">
             {

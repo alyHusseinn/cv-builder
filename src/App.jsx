@@ -5,6 +5,7 @@ import Preview from './components/preview/preview.jsx';
 
 function App() {
   const [data,setData] = useState(MOCkUP_DATA);
+  const [secIdx, setSectionIdx] = useState(0);
 
   const update = {
     setInfo (newInfo) {
@@ -28,8 +29,8 @@ function App() {
         <h1>CV Builder</h1>
       </header>
       <div className="content">
-        <Sections value={data} updateData={update} className="sections"/>
-        <Preview info={data}/>
+        <Sections value={data} updateData={update} showSec={secIdx} updateSecIdx={(idx) => setSectionIdx(idx)}/>
+        <Preview info={data} showSecIdx={secIdx}/>
       </div>
       <footer>
         <h2>made by <a href="https://github.com/alyHusseinn">AlyHussein</a> | <a href="https://github.com/alyHusseinn/cv-builder">Source</a></h2>

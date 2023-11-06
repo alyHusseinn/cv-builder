@@ -3,13 +3,13 @@ import Edu from "./edu";
 import Exp from "./exp";
 import Skills from "./skills";
 
-function Preview({info}){
+function Preview({info,showSecIdx}){
     return (
         <div className="preview">
-            <GenInfo value={info.generalInfo}/>
-            <Edu value={info.education}/>
-            <Skills value={info.skills}/>
-            <Exp value={info.experience}/>
+            <GenInfo addBorder={showSecIdx == 0} value={info.generalInfo}/>
+            <Edu addBorder={showSecIdx == 1} value={info.education}/>
+            <Skills addBorder={showSecIdx == 2} value={info.skills}/>
+            <Exp addBorder={showSecIdx == 3} value={info.experience}/>
         </div>
     );
 }

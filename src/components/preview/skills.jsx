@@ -1,6 +1,6 @@
-function Skills({value}){
+function Skills({value, addBorder}){
     return (
-    <div className="cv-skills">
+    <div className={`${addBorder? "add-border" : ""} cv-skills`}>
         <h1 className="skills-header sec-head">Skills</h1>
         <div className="skills">
         {

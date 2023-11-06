@@ -1,7 +1,7 @@
-function Exp({value}){
-    return (
+function Exp({value,addBorder}){
+    return ( // "cv-exp" "add-border"
         
-        <div className="preview-exp">
+        <div className={`${addBorder? "add-border" : ""} cv-exp`}>
             <h1 className="exp-header sec-head">Experience</h1>
             {
                 value.map((job, idx)=> {

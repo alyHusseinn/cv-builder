@@ -1,8 +1,20 @@
-# React + Vite
+# CV-Builder App
+cv Builder allows users to create a good looking CV in a simple way.
+the UI consists of two main sections: the control and preview.
+the project was part of TheOdinProject to learn state managment in react.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Demo 
+[Live Preview](https://cv-builder-mocha-alpha.vercel.app)
 
-Currently, two official plugins are available:
+## built with
+- react
+- scss
+- html2pdf
+- vite
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## getting started
+```
+https://github.com/alyHusseinn/cv-builder.git
+npm install
+npm run dev
+```

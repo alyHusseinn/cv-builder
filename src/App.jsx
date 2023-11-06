@@ -39,7 +39,7 @@ function App() {
         </div>
         <footer>
           <h2>
-            made by <a href="https://github.com/alyHusseinn">AlyHussein</a> |{" "}
+            Built by <a href="https://github.com/alyHusseinn">AlyHussein</a> |{" "}
             <a href="https://github.com/alyHusseinn/cv-builder">Source</a>
           </h2>
         </footer>
